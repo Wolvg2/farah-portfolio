@@ -52,6 +52,7 @@ export default function Navbar() {
               bg-[url('/Assets/paper-texture.jpg')] bg-cover bg-center
               rounded-xl shadow-xl
               p-5 flex flex-col gap-4 md:hidden
+              z-50
             "
           >
             <Link to="/character-design" className="nav-link" onClick={() => setOpen(false)}>Character Design</Link>

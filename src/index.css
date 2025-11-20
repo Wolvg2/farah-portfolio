@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-html,body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -13,7 +14,59 @@ html,body {
   font-weight: 500;
   font-size: large;
 }
+
 .nav-link:hover {
   color: #696161;
 }
 
+/* Styles for the "Entrar" button */
+.btn-entrar {
+  position: relative;
+  
+
+  background-position: center;
+
+}
+
+.btn-entrar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/Assets/boton-entrar-enviar.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0.75rem; 
+}
+
+.btn-entrar:hover::after {
+  opacity: 1;
+}
+
+
+
+
+/* Fonts */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/Fonts/KGMidnightMemories.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-custom {
+  font-family: 'MyCustomFont', serif !important;
+}
+
+@font-face {
+  font-family: 'FontTitle';
+  src: url('/Fonts/Minya.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.font-title {
+  font-family: 'FontTitle', serif !important;
+}

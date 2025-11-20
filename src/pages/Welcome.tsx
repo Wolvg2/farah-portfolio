@@ -3,22 +3,38 @@ import { Link } from "react-router-dom"
 function Welcome() {
 
     return (
-        <div className="min-h-screen w-full bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#b3c787] bg-blend-multiply flex flex-col justify-center items-center ">
-            
-            <div className="text-center">
-                <div className="flex flex-col items-center pt-8">
-                    <img src="/Assets/ojo-farahdise.png" className="w-40 h-40 md:w-100 md:h-100" alt="Ojo Farahdise" />
+        <div className="min-h-screen w-full bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#d5e69f] bg-blend-multiply flex items-center justify-center p-4">
+            <div className="text-center max-w-3xl">
+                <div className="flex justify-center mb-3">
+                    <img
+                        src="/Assets/ojo-farahdise.png"
+                        className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64"
+                        alt="Ojo Farahdise"
+                    />
                 </div>
-                <h1 className="text-5xl md:text-6xl font-serif mt-4 mb-2">Farah Crisostomo Monsivais</h1>
-                <p className="text-xl md:text-2xl font-serif mb-4">Artista Conceptual / Artista de personajes 3D</p>        
-                <div className="flex flex-col items-center pt-4 mb-8">
-                    <img src="/Assets/decoracion-luna.png" className="w-20 h-40 md:w-40 md:h-20" alt="Decoración luna/estrellas" />
+                <div className="mb-3">
+                    <h1 className="font-title text-4xl md:text-5xl lg:text-6xl text-[#2f1d1a] tracking-wider">
+                        Farah Crisostomo Monsivais
+                    </h1>
+                    <p className="font-custom text-lg md:text-xl lg:text-2xl mt-1 text-[#2f1d1a] font-semibold tracking-widest">
+                        Artista Conceptual / Artista de personajes 3D
+                    </p>
                 </div>
-                <Link to="/home"
-                    className="mx-auto px-6 py-2 bg-orange-500 text-white text-xl font-serif rounded-xl hover:bg-orange-600 transition">
-                    Entrar</Link>
+                <div className="flex justify-center ">
+                    <img
+                        src="/Assets/decoracion-luna.png"
+                        className="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44"
+                        alt="Decoración luna/estrellas"
+                    />
+                </div>
+                <Link
+                    to="/home"
+                    className="btn-entrar inline-block px-20 py-10 text-[#2f1d1a] text-2xl md:text-3xl font-title rounded-xl transition-all duration-300  font-bold "
+                >
+                    <span className="relative z-10">Entrar</span>
+                </Link>
             </div>
-            
+
         </div>
     )
 }
