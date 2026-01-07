@@ -1,67 +1,70 @@
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 function CharacterDesign() {
     const galleryImages = [
-        // Array of image URLs or import statements
-        { id: 1, title: 'Character Design', image: '/Personajes-2D/niño-con-peces-2.jpg', url: '/character-design', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
-        { id: 2, title: 'Background Design', image: '/Escenarios-2D/Takoyakis-con-firma.jpg', url: '/background-design', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
-        { id: 3, title: '3D Character', image: '', url: '/d-character', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
-        { id: 4, title: '3D Environment', image: '', url: '/d-environment', tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
+        { id: 1, title: 'Niño con Peces', image: '/Personajes-2D/niño-con-peces-2.jpg', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
+        { id: 2, title: 'Chica Punk', image: '/Personajes-2D/chica-punk.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
+        { id: 3, title: 'Flama', image: '/Personajes-2D/flama.jpg', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
+        { id: 4, title: 'Pajaro Papel', image: '/Personajes-2D/pajaron-papel.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
+        { id: 5, title: 'Piratas', image: '/Personajes-2D/piratas.jpg', tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
     ];
 
     return (
+        <div className="min-h-screen w-full flex flex-col justify-between px-4 md:px-10 py-10">
+            <div className="max-w-[92%] w-full mx-auto bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-12 lg:p-16">
 
-
-        <div className="min-h-screen w-full flex justify-center items-start px-4 md:px-10 py-3">
-            <div className="max-w-[92%] w-full min-h-[calc(70vh-1rem)] bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-12 lg:p-16">
-                <div className="bg-len bg-no-repeat bg-center bg-[url('/Assets/base-titulos.png')] ">
-                    <h1 className="font-title text-2xl md:text-3xl lg:text-5xl text-center text-[#2f1d1a] mb-8 pt-4 pb-6  ">
+                <div className="bg-center bg-no-repeat bg-[url('/Assets/base-titulos.png')] bg-size-[auto_800%]">
+                    <h1 className="font-title text-2xl md:text-3xl lg:text-5xl text-center text-[#2f1d1a] mb-8 pt-2 pb-6 font-semibold tracking-widest">
                         Character Design
                     </h1>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12 ">
                     {galleryImages.map((item) => (
-                        <Link
+                        <div
                             key={item.id}
-                            to={item.url}
                             className={`group relative hover:rotate-0 hover:scale-105 transition-all duration-300 hover:z-10`}
                         >
-                            <div className="transition-shadow duration-300">
-                                <div className="aspect-square bg-gray-200 mb-4 overflow-hidden">
-                                    <img
-                                        src={item.image}
-                                        alt={item.title}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                                    />
-                                </div>
-                                <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="transition-shadow duration-300 ">
+                                <Zoom>
+                                    <div className="aspect-square mb-4 overflow-hidden cursor-zoom-in ">
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            className="w-full h-full object-cover "
+                                            style={{ backgroundColor: "#ffffff" }}
+                                        />
+                                    </div>
+                                </Zoom>
+                                <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                                     <h3 className="text-white font-custom text-2xl md:text-3xl text-center px-4">
                                         {item.title}
                                     </h3>
                                 </div>
                             </div>
-                        </Link>
+                        </div>
                     ))}
                 </div>
-            </div>
-            <div className="fixed bottom-4 text-sm text-white flex items-center">
-                <button
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="w-100 h-50 hover:scale-110 transition-transform"
-                    style={{
-                        backgroundImage: "url('/Assets/back-top.png')",
-                        backgroundSize: 'contain',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                        border: 'none',
-                        backgroundColor: 'transparent'
-                    }}
-                    aria-label="Volver al inicio"
-                >
-                </button>
-            </div>
 
+                <div className="flex justify-center mt-40">
+                    <button
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className="w-50 h-50 hover:scale-110 transition-transform"
+                        style={{
+                            backgroundImage: "url('/Assets/back-top.png')",
+                            backgroundSize: 'contain',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            border: 'none',
+                            backgroundColor: 'transparent'
+                        }}
+                        aria-label="Volver al inicio"
+                    />
+                </div>
+            </div>
+            <div className="grow"></div>
         </div>
     )
 }

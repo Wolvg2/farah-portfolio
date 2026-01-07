@@ -5,15 +5,15 @@ function Home() {
     const galleryImages = [
         // Array of image URLs or import statements
         { id: 1, title: 'Character Design', image: '/Personajes-2D/niño-con-peces-2.jpg', url: '/character-design', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
-        { id: 2, title: 'Background Design', image: '/Escenarios-2D/Takoyakis-con-firma.jpg', url: '/background-design', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
+        { id: 2, title: 'Background Design', image: '/Escenarios-2D/Takoyakis.jpg', url: '/background-design', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
         { id: 3, title: '3D Character', image: '', url: '/d-character', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
-        { id: 4, title: '3D Environment', image: '', url: '/d-environment', tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
+        { id: 4, title: '3D Environment', image: '', url: '/d-environment', tapeRotation: 'rotate-2', cardRotation: 'rotate-3'},
     ];
 
     return (
-        <div className="min-h-screen w-full flex justify-center items-start px-4 md:px-10 py-3">
-            <div className="max-w-[92%] w-full min-h-[calc(70vh-1rem)] bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-12 lg:p-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="min-h-screen w-full flex flex-col justify-between px-4 md:px-10 py-10">
+            <div className="max-w-[92%] w-full mx-auto bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-12 lg:p-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
                     {galleryImages.map((item) => (
                         <Link
                             key={item.id}
@@ -44,14 +44,13 @@ function Home() {
                             </div>
                         </Link>
                     ))}
-                    
+
                 </div>
-                
-            </div>
-        <div className="fixed bottom-4 text-sm text-white flex items-center">
+                {/* Botón Back to Top */}
+                <div className="flex justify-center mt-40">
                     <button
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="w-100 h-50 hover:scale-110 transition-transform"
+                        className="w-50 h-50 hover:scale-110 transition-transform"
                         style={{
                             backgroundImage: "url('/Assets/back-top.png')",
                             backgroundSize: 'contain',
@@ -61,9 +60,11 @@ function Home() {
                             backgroundColor: 'transparent'
                         }}
                         aria-label="Volver al inicio"
-                    >
-                    </button>
-                </div>           
+                    />
+                </div>
+
+            </div>
+            <div className="grow"></div>
         </div>
     )
 }

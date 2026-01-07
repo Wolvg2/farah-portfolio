@@ -6,7 +6,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-5 z-50 flex justify-center px-4 ">
+    <nav className="top-0 left-0 right-0 z-50 flex justify-center px-4 pt-5">
       <div
         className="
           relative

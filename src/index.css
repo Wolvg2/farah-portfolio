@@ -20,32 +20,19 @@ body {
 }
 
 /* Styles for the "Entrar" button */
+/* Styles for the "Entrar" button */
 .btn-entrar {
   position: relative;
-  
-
-  background-position: center;
-
-}
-
-.btn-entrar::after {
-  content: '';
-  position: absolute;
-  inset: 0;
   background-image: url('/Assets/boton-entrar-enviar.png');
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 0.75rem; 
+  transition: all 0.3s ease;
 }
 
-.btn-entrar:hover::after {
-  opacity: 1;
+.btn-entrar:hover {
+  transform: scale(1.05); /* Crece ligeramente */
+  
 }
-
-
-
 
 /* Fonts */
 @font-face {
@@ -70,3 +57,4 @@ body {
 .font-title {
   font-family: 'FontTitle', serif !important;
 }
+
