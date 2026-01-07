@@ -1,3 +1,4 @@
+
 function About() {
     return (
        <div className="min-h-screen w-full flex flex-col justify-between px-4 md:px-10 py-10">
