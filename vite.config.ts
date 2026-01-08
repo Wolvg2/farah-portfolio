@@ -6,6 +6,5 @@
       plugins: [
         react(), // Add react plugin if using React
         tailwindcss(),
-      ],
-      base: '/farah-portafolio/',
+      ]
     })
