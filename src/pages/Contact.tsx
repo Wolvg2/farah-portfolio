@@ -25,7 +25,7 @@ function Contact() {
     ];
 
     return (
-       <div className="min-h-screen w-full flex flex-col justify-between px-4 md:px-10 py-10">
+        <div className="min-h-screen w-full flex flex-col justify-between px-4 md:px-10 py-10">
             <div className="max-w-[92%] w-full mx-auto bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-12 lg:p-16 ">
                 {/* Tu contenido aquí */}
                 <div className="bg-center bg-no-repeat bg-[url('/Assets/base-titulos.png')] bg-size-[auto_800%]">
@@ -51,7 +51,8 @@ function Contact() {
                     ))}
                 </div>
 
-                <form className="font-custom text-lg md:text-xl lg:text-2xl text-[#2f1d1a] leading-relaxed max-w-3xl mx-auto ">
+                <form className="font-custom text-lg md:text-xl lg:text-2xl text-[#2f1d1a] leading-relaxed max-w-3xl mx-auto " action="https://formspree.io/f/xojjqvwj"
+                    method="POST">
                     <div className="mb-6">
                         <label htmlFor="name" className="block mb-2 font-semibold">Name:</label>
                         <input type="text" id="name" name="name" className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a3c293] bg-[#e3cba4]" required />

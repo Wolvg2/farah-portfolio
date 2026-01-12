@@ -6,7 +6,7 @@ function Home() {
         // Array of image URLs or import statements
         { id: 1, title: 'Character Design', image: '/Personajes-2D/niño-con-peces-2.jpg', url: '/character-design', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
         { id: 2, title: 'Background Design', image: '/Escenarios-2D/Takoyakis.jpg', url: '/background-design', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
-        { id: 3, title: '3D Character', image: '', url: '/d-character', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
+        { id: 3, title: '3D Character', image: '/Personajes-3D/Boy-image.jpg', url: '/d-character', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
         { id: 4, title: '3D Environment', image: '', url: '/d-environment', tapeRotation: 'rotate-2', cardRotation: 'rotate-3'},
     ];
 
