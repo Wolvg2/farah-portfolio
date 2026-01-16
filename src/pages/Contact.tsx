@@ -69,7 +69,7 @@ function Contact() {
                         <label htmlFor="message" className="block mb-2 font-semibold">Message:</label>
                         <textarea id="message" name="message" rows={5} className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a3c293] bg-[#e3cba4]" required></textarea>
                     </div>
-                    <button type="submit" className="btn-entrar inline-block px-5 py-5 text-[#2f1d1a] text-lg md:text-2xl font-custom rounded-xl transition-all duration-300  font-bold ">
+                    <button type="submit" className="btn-entrar inline-block px-9 py-5 text-[#2f1d1a] text-lg md:text-2xl font-custom rounded-xl transition-all duration-300  font-bold ">
                         Send Message
                     </button>
                 </form>

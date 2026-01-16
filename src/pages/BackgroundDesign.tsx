@@ -4,16 +4,16 @@ import 'react-medium-image-zoom/dist/styles.css';
 
 function BackgroundDesign() {
     const galleryImages = [
-        { id: 1, title: 'Cabaña Sin Hojas', image: '/Escenarios-2D/cabaña-sin-hojas.jpg', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
+        { id: 1, title: 'Takoyakis', image: '/Escenarios-2D/Takoyakis.jpg', tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
         { id: 2, title: 'Casa Tarde', image: '/Escenarios-2D/casa-tarde.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
-        { id: 3, title: 'Cuarto Noche', image: '/Escenarios-2D/cuarto-noche.png', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
-        { id: 4, title: 'Mar de Tinta', image: '/Escenarios-2D/mar-tinta.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
-        { id: 5, title: 'Takoyakis', image: '/Escenarios-2D/Takoyakis.jpg', tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
+        { id: 3, title: 'Cabaña Sin Hojas', image: '/Escenarios-2D/cabaña-sin-hojas.jpg', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
+        { id: 4, title: 'Cuarto Noche', image: '/Escenarios-2D/cuarto-noche.png', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
+        { id: 5, title: 'Mar de Tinta', image: '/Escenarios-2D/mar-tinta.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
     ];
 
     return (
         <div className="min-h-screen w-full flex flex-col justify-between px-4 md:px-10 py-10">
-            <div className="max-w-[92%] w-full mx-auto bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-12 lg:p-16">
+            <div className="max-w-[92%] w-full mx-auto bg-[url('/Assets/paper-texture.jpg')] bg-no-repeat bg-center bg-cover bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-12 lg:p-16">
 
                 <div className="bg-center bg-no-repeat bg-[url('/Assets/base-titulos.png')] bg-size-[auto_800%]">
                     <h1 className="font-title text-2xl md:text-3xl lg:text-5xl text-center text-[#2f1d1a] mb-8 pt-2 pb-6 font-semibold tracking-widest">

@@ -5,16 +5,15 @@ import 'react-medium-image-zoom/dist/styles.css';
 function CharacterDesign() {
     const galleryImages = [
         { id: 1, title: 'Niño con Peces', image: '/Personajes-2D/niño-con-peces-2.jpg', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
-        { id: 2, title: 'Chica Punk', image: '/Personajes-2D/chica-punk.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
-        { id: 3, title: 'Flama', image: '/Personajes-2D/flama.jpg', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
-        { id: 4, title: 'Pajaro Papel', image: '/Personajes-2D/pajaron-papel.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
-        { id: 5, title: 'Piratas', image: '/Personajes-2D/piratas.jpg', tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
+        { id: 2, title: 'Piratas', image: '/Personajes-2D/piratas.jpg', tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
+        { id: 3, title: 'Chica Punk', image: '/Personajes-2D/chica-punk.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
+        { id: 4, title: 'Flama', image: '/Personajes-2D/flama.jpg', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
+        { id: 5, title: 'Pajaro Papel', image: '/Personajes-2D/pajaron-papel.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
     ];
 
     return (
         <div className="min-h-screen w-full flex flex-col justify-between px-4 md:px-10 py-10">
-            <div className="max-w-[92%] w-full mx-auto bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-12 lg:p-16">
-
+            <div className="max-w-[92%] w-full mx-auto bg-[url('/Assets/paper-texture.jpg')] bg-no-repeat bg-center bg-cover bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-12 lg:p-16">
                 <div className="bg-center bg-no-repeat bg-[url('/Assets/base-titulos.png')] bg-size-[auto_800%]">
                     <h1 className="font-title text-2xl md:text-3xl lg:text-5xl text-center text-[#2f1d1a] mb-8 pt-2 pb-6 font-semibold tracking-widest">
                         Character Design
