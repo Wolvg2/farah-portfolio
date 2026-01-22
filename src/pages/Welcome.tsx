@@ -8,12 +8,12 @@ function Welcome() {
                 <div className="flex justify-center mb-3">
                     <img
                         src="/Assets/ojo-farahdise.png"
-                        className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64"
+                        className="lg:w-90 lg:h-90 w-72 h-72 md:w-80 md:h-80"
                         alt="Ojo Farahdise"
                     />
                 </div>
                 <div className="mb-3">
-                    <h1 className="font-title text-4xl md:text-5xl lg:text-6xl text-[#2f1d1a] tracking-wider">
+                    <h1 className="font-title text-4xl md:text-5xl lg:text-4xl text-[#2f1d1a] tracking-wider">
                         Farah Crisostomo Monsivais
                     </h1>
                     <p className="font-custom text-lg md:text-xl lg:text-2xl mt-1 text-[#2f1d1a] font-semibold tracking-widest">

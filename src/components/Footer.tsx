@@ -1,27 +1,22 @@
-import { Instagram, X, Facebook, Linkedin } from 'lucide-react';
+import { Instagram, X, Facebook, Linkedin, TypeOutline } from 'lucide-react';
 
 
 export default function Footer() {
     const socialLinks = [
         {
             name: 'Instagram',
-            url: 'https://www.instagram.com/farahcrisostomo/',
-            icon: <Instagram size={20} />
+            url: 'https://www.instagram.com/_farahdise.nightmares_/',
+            icon: <Instagram size={30} />
         },
         {
-            name: 'X',
-            url: 'https://twitter.com/farahcmonsivais',
-            icon: <X size={20} />
-        },
-        {
-            name: 'Facebook',
-            url: 'https://www.facebook.com/farahcrisostomo.art',
-            icon: <Facebook size={20} />
+            name: 'TypeOutline',
+            url: 'https://www.tiktok.com/@_farahdise.nightmares_',
+            icon: <TypeOutline size={30} />
         },
         {
             name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/farahcrisostomo/',
-            icon: <Linkedin size={20} />
+            url: 'https://www.linkedin.com/in/farah-crisostomo-b6a130293/',
+            icon: <Linkedin size={30} />
         }
     ];
     return (
