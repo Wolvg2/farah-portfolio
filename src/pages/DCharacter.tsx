@@ -12,7 +12,7 @@ function DCharacter() {
                         Personajes 3D
                     </h1>
                 </div>
-            <div className="w-full max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="w-full max-w-8xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <video
                     className="w-full h-full object-cover"
                     controls
