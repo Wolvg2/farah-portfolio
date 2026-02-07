@@ -25,7 +25,7 @@ function Contact() {
                 {/* Tu contenido aquí */}
                 <div className="bg-center bg-no-repeat bg-[url('/Assets/base-titulos.png')] bg-size-[auto_800%]">
                     <h1 className="font-title text-2xl md:text-3xl lg:text-5xl text-center text-[#2f1d1a] mb-8 pt-2 pb-6 font-semibold tracking-widest">
-                        Contact Me
+                        Contactame
                     </h1>
                 </div>
                 <h3 className="font-custom text-lg md:text-xl lg:text-3xl text-[#2f1d1a] leading-relaxed text-center mb-8 font-bold">

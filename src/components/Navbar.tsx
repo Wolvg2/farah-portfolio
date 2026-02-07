@@ -13,16 +13,16 @@ export default function Navbar() {
           max-w-[90%] w-full
           bg-[url('/Assets/paper-texture.jpg')] bg-cover bg-center
           shadow-xl 
-          px-4 md:px-10 py-3
-          flex items-center justify-between
+          px-6 md:px-12 py-4
+          flex items-center
         "
       >
         {/* LOGO */}
-        <a href="/home">
+        <a href="/home" className="shrink-0">
           <img
             src="/Assets/farah-Crisostomo-logo.png"
             alt="Logo Farah Monsivais"
-            className="h-25 w-auto"
+            className="h-40 w-auto"
           />
         </a>
 
@@ -35,13 +35,13 @@ export default function Navbar() {
         </button>
 
         {/* LINKS (DESKTOP) */}
-        <ul className="hidden md:flex gap-10 lg:gap-20 xl:gap-30">
-          <li><Link to="/character-design" className="nav-link">Character Design</Link></li>
-          <li><Link to="/background-design" className="nav-link">Background Design</Link></li>
-          <li><Link to="/d-character" className="nav-link">3D Character</Link></li>
-          <li><Link to="/d-environment" className="nav-link">3D Environment</Link></li>
-          <li><Link to="/about" className="nav-link">About</Link></li>
-          <li><Link to="/contact" className="nav-link">Contact</Link></li>
+        <ul className=" hidden  md:flex flex-1 justify-end  gap-10 lg:gap-16 xl:gap-20 items-center text-[clamp(1rem,5vw,1.4rem)lg:text-8xl">
+          <li><Link to="/character-design" className="nav-link">Diseño de Personajes</Link></li>
+          <li><Link to="/background-design" className="nav-link">Diseño de Escenarios</Link></li>
+          <li><Link to="/d-character" className="nav-link">Personajes 3D</Link></li>
+          <li><Link to="/d-environment" className="nav-link">Escenarios 3D</Link></li>
+          <li><Link to="/about" className="nav-link">Acerca de mi</Link></li>
+          <li><Link to="/contact" className="nav-link">Contactame</Link></li>
         </ul>
 
         {/* MENU MÓVIL */}

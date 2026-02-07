@@ -17,7 +17,7 @@ function BackgroundDesign() {
 
                 <div className="bg-center bg-no-repeat bg-[url('/Assets/base-titulos.png')] bg-size-[auto_800%]">
                     <h1 className="font-title text-2xl md:text-3xl lg:text-5xl text-center text-[#2f1d1a] mb-8 pt-2 pb-6 font-semibold tracking-widest">
-                        Background Design
+                        Diseño de Escenarios
                     </h1>
                 </div>
 

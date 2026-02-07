@@ -1,41 +1,140 @@
 import { Link } from "react-router-dom"
 
 function Welcome() {
-
     return (
-        <div className="min-h-screen w-full bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#d5e69f] bg-blend-multiply flex items-center justify-center p-4">
-            <div className="text-center max-w-3xl">
-                <div className="flex justify-center mb-3">
-                    <img
-                        src="/Assets/ojo-farahdise.png"
-                        className="lg:w-90 lg:h-90 w-72 h-72 md:w-80 md:h-80"
-                        alt="Ojo Farahdise"
-                    />
-                </div>
-                <div className="mb-3">
-                    <h1 className="font-title text-4xl md:text-5xl lg:text-4xl text-[#2f1d1a] tracking-wider">
+        <div
+            className="
+                relative
+                h-screen
+                w-full
+                overflow-hidden
+                bg-[url('/Assets/paper-texture.jpg')]
+                bg-repeat
+                bg-[#d5e69f]
+                bg-blend-multiply
+                flex
+                justify-center
+                pt-[2vh]
+            "
+
+        >
+            {/* ESQUINAS DECORATIVAS */}
+            <img
+                src="/Assets/bordes.png"
+                className="absolute top-0 left-0 w-60 pointer-events-none"
+            />
+
+            <img
+                src="/Assets/bordes.png"
+                className="absolute top-0 right-0 w-60 rotate-90 pointer-events-none"
+            />
+
+            <img
+                src="/Assets/bordes.png"
+                className="absolute bottom-0 right-0 w-60 rotate-180 pointer-events-none"
+            />
+
+            <img
+                src="/Assets/bordes.png"
+                className="absolute bottom-0 left-0 w-60     -rotate-90 pointer-events-none"
+            />
+
+
+            <div className="relative text-center max-w-3xl w-full">
+
+                {/* OJO */}
+                <img
+                    src="/Assets/ojo-farahdise.png"
+                    alt="Ojo Farahdise"
+                    className="
+                        mx-auto
+                        max-h-[100vh]
+                        w-auto
+                        object-contain
+                        -mb-40
+                        relative
+                        z-10
+                    "
+                />
+
+                {/* TEXTO */}
+                <div className="relative z-20 flex justify-center" >
+                    <h1
+                        className="
+                            font-title
+                            text-[clamp(1.6rem,3.5vw,3rem)]
+                            text-[#2f1d1a]
+                            tracking-[0.35em]
+                            leading-none
+                            whitespace-nowrap
+                            uppercase
+                            inline-block
+                            mx-auto
+                            transform
+                            translate-x-[-0.175em]
+                        "
+                    >
                         Farah Crisostomo Monsivais
                     </h1>
-                    <p className="font-custom text-lg md:text-xl lg:text-2xl mt-1 text-[#2f1d1a] font-semibold tracking-widest">
+                </div>
+                <div className="relative z-20 flex justify-center" >
+                    <p
+                        className="
+                            font-title
+                            text-[clamp(1.5rem,1vw,1rem)]
+                            text-[#2f1d1a]
+                            tracking-[0.35em]
+                            leading-none
+                            whitespace-nowrap
+                            uppercase
+                            inline-block
+                            mx-auto
+                            transform
+                            translate-x-[-0.175em]
+                        "
+                    >
                         Artista Conceptual / Artista de personajes 3D
                     </p>
                 </div>
-                <div className="flex justify-center ">
-                    <img
-                        src="/Assets/decoracion-luna.png"
-                        className="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44"
-                        alt="Decoración luna/estrellas"
-                    />
-                </div>
+
+                {/* DECORACIÓN */}
+                <img
+                    src="/Assets/decoracion-luna.png"
+                    alt="Decoración luna/estrellas"
+                    className="
+                        mx-auto
+                        max-h-[20vh]
+                        w-auto
+                        object-contain
+                        -mt-6
+                        -mb-6
+                    "
+                />
+
+                {/* BOTÓN */}
                 <Link
                     to="/home"
-                    className="btn-entrar inline-block px-20 py-10 text-[#2f1d1a] text-2xl md:text-3xl font-title rounded-xl transition-all duration-300  font-bold "
+                    className="
+                        btn-entrar
+                        inline-block
+                        px-20
+                        py-10
+                        text-[#2f1d1a]
+                        text-5xl
+                        font-title
+                        rounded-xl
+                        font-bold
+                        -mt-2
+                        transition-all
+                        duration-300
+                    "
                 >
-                    <span className="relative z-10">Entrar</span>
+                    Entrar
                 </Link>
-            </div>
 
+            </div>
         </div>
     )
 }
+
 export default Welcome

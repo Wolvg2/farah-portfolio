@@ -4,15 +4,15 @@ import { Link } from "react-router-dom"
 function Home() {
     const galleryImages = [
         // Array of image URLs or import statements
-        { id: 1, title: 'Character Design', image: '/Personajes-2D/niño-con-peces-2.jpg', url: '/character-design', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
-        { id: 2, title: 'Background Design', image: '/Escenarios-2D/Takoyakis.jpg', url: '/background-design', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
-        { id: 3, title: '3D Character', image: '/Personajes-3D/Boy-image.jpg', url: '/d-character', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
-        { id: 4, title: '3D Environment', image: '/Assets/coming-soon.png', url: '/d-environment', tapeRotation: 'rotate-2', cardRotation: 'rotate-3'},
+        { id: 1, title: 'Diseño de Personajes', image: '/Personajes-2D/niño-con-peces-2.jpg', url: '/character-design', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
+        { id: 2, title: 'Diseño de Escenarios', image: '/Escenarios-2D/Takoyakis.jpg', url: '/background-design', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
+        { id: 3, title: 'Personajes 3D', image: '/Personajes-3D/Boy-image.jpg', url: '/d-character', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
+        { id: 4, title: 'Escenarios 3D', image: '/Assets/coming-soon.png', url: '/d-environment', tapeRotation: 'rotate-2', cardRotation: 'rotate-3'},
     ];
 
     return (
         <div className="min-h-screen w-full flex flex-col justify-between px-4 md:px-10 py-10">
-            <div className="max-w-[92%] w-full mx-auto bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-12 lg:p-16">
+            <div className="max-w-[92%] w-full mx-auto bg-[url('/Assets/paper-texture.jpg')] bg-repeat bg-[#e8e8e8] bg-blend-multiply shadow-2xl p-6 md:p-20 lg:p-25">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
                     {galleryImages.map((item) => (
                         <Link
