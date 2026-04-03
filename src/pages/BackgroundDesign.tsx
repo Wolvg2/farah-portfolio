@@ -4,11 +4,12 @@ import 'react-medium-image-zoom/dist/styles.css';
 
 function BackgroundDesign() {
     const galleryImages = [
-        { id: 1, title: 'Takoyakis', image: '/Escenarios-2D/Takoyakis.jpg', tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
-        { id: 2, title: 'Casa Tarde', image: '/Escenarios-2D/casa-tarde.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
-        { id: 3, title: 'Cabaña Sin Hojas', image: '/Escenarios-2D/cabaña-sin-hojas.jpg', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
-        { id: 4, title: 'Cuarto Noche', image: '/Escenarios-2D/cuarto-noche.png', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
-        { id: 5, title: 'Mar de Tinta', image: '/Escenarios-2D/mar-tinta.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
+        { id: 1, title: 'Casa Fantasma', image: '/Escenarios-2D/casa_fantasma.png', tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
+        { id: 2, title: 'Takoyakis', image: '/Escenarios-2D/Takoyakis.jpg', tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
+        { id: 3, title: 'Casa Tarde', image: '/Escenarios-2D/casa-tarde.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
+        { id: 4, title: 'Cabaña Sin Hojas', image: '/Escenarios-2D/cabaña-sin-hojas.jpg', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
+        { id: 5, title: 'Cuarto Noche', image: '/Escenarios-2D/cuarto-noche.png', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
+        { id: 6, title: 'Mar de Tinta', image: '/Escenarios-2D/mar-tinta.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
     ];
 
     return (
