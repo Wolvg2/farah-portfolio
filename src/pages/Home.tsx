@@ -4,8 +4,8 @@ import { Link } from "react-router-dom"
 function Home() {
     const galleryImages = [
         // Array of image URLs or import statements
-        { id: 1, title: 'Diseño de Personajes', image: '/Personajes-2D/niño-con-peces-2.jpg', url: '/character-design', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
-        { id: 2, title: 'Diseño de Escenarios', image: '/Escenarios-2D/Takoyakis.jpg', url: '/background-design', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
+        { id: 1, title: 'Diseño de Personajes', image: '/Personajes-2D/nino-con-peces.png', url: '/character-design', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
+        { id: 2, title: 'Diseño de Escenarios', image: '/Escenarios-2D/Takoyakis.png', url: '/background-design', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
         { id: 3, title: 'Personajes 3D', image: '/Personajes-3D/Boy-image.jpg', url: '/d-character', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
         { id: 4, title: 'Escenarios 3D', image: '/Assets/coming-soon.png', url: '/d-environment', tapeRotation: 'rotate-2', cardRotation: 'rotate-3'},
     ];

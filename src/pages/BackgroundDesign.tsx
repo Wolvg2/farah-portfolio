@@ -1,15 +1,24 @@
 
-import Zoom from 'react-medium-image-zoom';
-import 'react-medium-image-zoom/dist/styles.css';
+import { useState } from 'react';
+
+type GalleryItem = {
+    id: number;
+    title: string;
+    images: string[];
+    tapeRotation: string;
+    cardRotation: string;
+};
 
 function BackgroundDesign() {
-    const galleryImages = [
-        { id: 1, title: 'Casa Fantasma', image: '/Escenarios-2D/casa_fantasma.png', tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
-        { id: 2, title: 'Takoyakis', image: '/Escenarios-2D/Takoyakis.jpg', tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
-        { id: 3, title: 'Casa Tarde', image: '/Escenarios-2D/casa-tarde.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
-        { id: 4, title: 'Cabaña Sin Hojas', image: '/Escenarios-2D/cabaña-sin-hojas.jpg', tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
-        { id: 5, title: 'Cuarto Noche', image: '/Escenarios-2D/cuarto-noche.png', tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
-        { id: 6, title: 'Mar de Tinta', image: '/Escenarios-2D/mar-tinta.jpg', tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
+    const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
+
+    const galleryImages: GalleryItem[] = [
+        { id: 1, title: 'Casa Fantasma', images: ['/Escenarios-2D/casa_fantasma.png'], tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
+        { id: 2, title: 'Takoyakis', images: ['/Escenarios-2D/Takoyakis.png', '/Escenarios-2D/takoyakis_boceto.png'], tapeRotation: '-rotate-2', cardRotation: '-rotate-3' },
+        { id: 3, title: 'Casa Tarde', images: ['/Escenarios-2D/casa-tarde.png'], tapeRotation: 'rotate-2', cardRotation: 'rotate-1' },
+        { id: 4, title: 'Cabaña Sin Hojas', images: ['/Escenarios-2D/cabaña-sin-hojas.jpg'], tapeRotation: '-rotate-3', cardRotation: '-rotate-2' },
+        { id: 5, title: 'Cuarto Noche', images: ['/Escenarios-2D/cuarto-noche.png'], tapeRotation: '-rotate-1', cardRotation: '-rotate-1' },
+        { id: 6, title: 'Mar de Tinta', images: ['/Escenarios-2D/mar-tinta.png'], tapeRotation: 'rotate-2', cardRotation: 'rotate-3' },
     ];
 
     return (
@@ -26,19 +35,18 @@ function BackgroundDesign() {
                     {galleryImages.map((item) => (
                         <div
                             key={item.id}
-                            className={`group relative hover:rotate-0 hover:scale-105 transition-all duration-300 hover:z-10`}
+                            className={`group relative hover:rotate-0 hover:scale-105 transition-all duration-300 hover:z-10 cursor-pointer`}
+                            onClick={() => setSelectedItem(item)}
                         >
                             <div className="transition-shadow duration-300 ">
-                                <Zoom>
-                                    <div className="aspect-square mb-4 overflow-hidden cursor-zoom-in ">
-                                        <img
-                                            src={item.image}
-                                            alt={item.title}
-                                            className="w-full h-full object-cover "
-                                            style={{ backgroundColor: "#ffffff" }}
-                                        />
-                                    </div>
-                                </Zoom>
+                                <div className="aspect-square mb-4 overflow-hidden cursor-zoom-in ">
+                                    <img
+                                        src={item.images[0]}
+                                        alt={item.title}
+                                        className="w-full h-full object-cover "
+                                        style={{ backgroundColor: "#ffffff" }}
+                                    />
+                                </div>
                                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                                     <h3 className="text-white font-custom text-2xl md:text-3xl text-center px-4">
                                         {item.title}
@@ -48,6 +56,42 @@ function BackgroundDesign() {
                         </div>
                     ))}
                 </div>
+
+                {selectedItem && (
+                    <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50" onClick={() => setSelectedItem(null)}>
+                        <div className="relative w-screen h-screen" onClick={(e) => e.stopPropagation()}>
+
+                            <button
+                                onClick={() => setSelectedItem(null)}
+                                className="absolute top-4 right-4 w-10 h-10 text-white text-3xl font-bold flex items-center justify-center rounded-full bg-black/50 hover:bg-black/70 transition-transform hover:scale-110"
+                                aria-label="Cerrar galería"
+                            >
+                                ×
+                            </button>
+                            
+                            <div
+                                className="w-screen h-screen overflow-y-auto snap-y snap-mandatory p-0"
+                                style={{
+                                    scrollbarWidth: 'thin',
+                                    msOverflowStyle: 'none'
+                                }}
+                            >
+                                <style>
+                                    {`::-webkit-scrollbar { width: 0 !important; height: 0 !important; }`}
+                                </style>
+                                {selectedItem.images.map((image, index) => (
+                                    <div key={index} className="snap-start h-screen flex items-center justify-center">
+                                        <img
+                                            src={image}
+                                            alt={`${selectedItem.title} ${index + 1}`}
+                                            className="h-screen w-screen object-contain"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                )}
 
                 <div className="flex justify-center mt-40">
                     <button
